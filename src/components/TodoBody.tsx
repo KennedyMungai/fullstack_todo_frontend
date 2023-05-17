@@ -5,11 +5,11 @@ import React from 'react'
 type Props = {}
 
 const TodoBody = (props: Props) => {
-	return <Flex>
-    <Text>
-ChickenWings Are the Bomb
-</Text>
-</Flex>
+	return (
+		<Flex>
+			<Text>ChickenWings Are the Bomb</Text>
+		</Flex>
+	)
 }
 
 export default TodoBody
