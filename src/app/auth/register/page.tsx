@@ -1,9 +1,10 @@
+import SignUp from '@/components/auth/SignUp'
 import React from 'react'
 
 type Props = {}
 
 const Register = (props: Props) => {
-	return <div>Register</div>
+	return <SignUp />
 }
 
 export default Register
