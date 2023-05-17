@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 interface AuthTemplate {
 	isAuthenticated: boolean
@@ -20,6 +20,5 @@ const authSlice = createSlice({
 		logout: () => {}
 	}
 })
-
 
 export default authSlice.reducer
