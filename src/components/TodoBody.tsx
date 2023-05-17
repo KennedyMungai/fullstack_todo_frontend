@@ -6,7 +6,7 @@ type Props = {}
 
 const TodoBody = (props: Props) => {
 	return (
-		<Flex>
+		<Flex direction='column' gap={4} p={4} width={'100vw'} height={'100vh'}>
 			<Text>ChickenWings Are the Bomb</Text>
 		</Flex>
 	)
