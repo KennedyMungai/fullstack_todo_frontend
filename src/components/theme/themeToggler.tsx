@@ -1,8 +1,10 @@
 import { FormLabel, Switch, useColorMode } from '@chakra-ui/react'
 
-type Props = {}
+type Props = {
+	showLabel: boolean
+}
 
-const ThemeToggler = (props: Props) => {
+const ThemeToggler = ({ showLabel = false }: Props) => {
 	return <div>themeToggler</div>
 }
 
