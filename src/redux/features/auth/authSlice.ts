@@ -21,12 +21,15 @@ const authSlice = createSlice({
 	initialState,
 	reducers: {
 		login: ({ isInitialized, isAuthenticated, user }) => {
-			if (isInitialized && isAuthenticated) {
+			if (isInitialized && isAuthenticated && user) {
 				return user
 			}
 		},
-		logout: ({ isAuthenticated }) => {
-			isAuthenticated = false
+		logout: ({ isAuthenticated, user, isInitialized }) => {
+			if (isInitialized && isAuthenticated && user) {
+				isAuthenticated = false
+				user = null
+			}
 		}
 	},
 	extraReducers: (builder) => {
