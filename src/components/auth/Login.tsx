@@ -78,6 +78,7 @@ const Login = (props: Props) => {
 						variant={'outline'}
 						colorScheme='gray'
 						isLoading={isSubmitting}
+						loadingText='Submitting...'
 					>
 						<Link href='/auth/login'>Login</Link>
 					</Button>
