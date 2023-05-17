@@ -5,7 +5,22 @@ type Props = {
 }
 
 const ThemeToggler = ({ showLabel = false }: Props) => {
-	return <div>themeToggler</div>
+	const { toggleColorMode, colorMode } = useColorMode()
+
+	return (
+		<>
+			{showLabel && (
+				<FormLabel htmlFor='theme-toggler'>Enable Dark Theme</FormLabel>
+			)}
+			<Switch
+				id='theme-toggler'
+				size={'sm'}
+				isChecked={colorMode === 'dark' ? true : false}
+				onChange={toggleColorMode}
+				colorScheme='green'
+			/>
+		</>
+	)
 }
 
 export default ThemeToggler
