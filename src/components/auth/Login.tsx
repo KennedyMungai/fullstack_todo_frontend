@@ -77,6 +77,7 @@ const Login = (props: Props) => {
 						type='submit'
 						variant={'outline'}
 						colorScheme='gray'
+						isLoading={isSubmitting}
 					>
 						<Link href='/auth/login'>Login</Link>
 					</Button>
