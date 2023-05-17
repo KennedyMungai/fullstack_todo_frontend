@@ -1,17 +1,24 @@
 'use client'
-import { Flex, FormControl, Heading, useColorModeValue } from '@chakra-ui/react'
+import {
+	Flex,
+	FormControl,
+	FormErrorMessage,
+	Heading,
+	Input,
+	useColorModeValue
+} from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 
 type Props = {}
 
 const Login = (props: Props) => {
-    const {
+	const {
 		handleSubmit,
 		register,
 		formState: { errors, isSubmitting }
 	} = useForm()
 
-    const onSubmit = (values) => {
+	const onSubmit = (values) => {
 		console.log(values)
 	}
 
@@ -26,7 +33,42 @@ const Login = (props: Props) => {
 			>
 				<Heading>Login</Heading>
 				<form onSubmit={handleSubmit(onSubmit)}>
-					<FormControl></FormControl>
+					<FormControl isInvalid={errors.email}>
+						<Input
+							placeholder='Email'
+							background={useColorModeValue(
+								'gray.300',
+								'gray.600'
+							)}
+							type='email'
+							size={'lg'}
+							mt={6}
+							{...register('email', {
+								required: 'Email is a required field'
+							})}
+						/>
+						<FormErrorMessage>
+							{errors.email && errors.email.message}
+						</FormErrorMessage>
+					</FormControl>
+					<FormControl isInvalid={errors.email}>
+						<Input
+							placeholder='Password'
+							background={useColorModeValue(
+								'gray.300',
+								'gray.600'
+							)}
+							type='password'
+							size={'lg'}
+							mt={6}
+							{...register('password', {
+								required: 'Password is a required field'
+							})}
+						/>
+						<FormErrorMessage>
+							{errors.password && errors.password.message}
+						</FormErrorMessage>
+					</FormControl>
 				</form>
 			</Flex>
 		</Flex>
