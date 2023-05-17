@@ -15,7 +15,9 @@ const ThemeToggler = ({ showLabel = false }: Props) => {
 			direction={'column'}
 		>
 			{showLabel && (
-				<FormLabel htmlFor='theme-toggler'>Enable Dark Theme</FormLabel>
+				<FormLabel htmlFor='theme-toggler'>
+					Enable {colorMode === 'dark' ? 'Light' : 'Dark'} Theme
+				</FormLabel>
 			)}
 			<Switch
 				id='theme-toggler'
