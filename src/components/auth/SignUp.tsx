@@ -51,7 +51,17 @@ const SignUp = () => {
 							size={'lg'}
 							mt={6}
 							{...register('username', {
-								required: 'Username is a required field'
+								required: 'Username is a required field',
+								minLength: {
+									value: 5,
+									message:
+										'The username must be at least 5 characters'
+								},
+								maxLength: {
+									value: 24,
+									message:
+										'The username cannot be longer than 24 characters'
+								}
 							})}
 						/>
 						<FormErrorMessage>
