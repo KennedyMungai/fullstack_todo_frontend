@@ -76,7 +76,7 @@ const Login = (props: Props) => {
 						mt={6}
 						type='submit'
 						variant={'outline'}
-						colorScheme='gray'
+						colorScheme='green'
 						isLoading={isSubmitting}
 						loadingText='Submitting...'
 					>
@@ -87,7 +87,7 @@ const Login = (props: Props) => {
 						mt={6}
 						type='submit'
 						variant={'outline'}
-						colorScheme='green'
+						colorScheme='gray'
 					>
 						<Link href='/auth/register'>Register Instead</Link>
 					</Button>
