@@ -3,11 +3,13 @@ import { createSlice } from '@reduxjs/toolkit'
 interface AuthTemplate {
 	isAuthenticated: boolean
 	isInitialized: boolean
+	user: any
 }
 
 const initialState: AuthTemplate = {
 	isAuthenticated: false,
-	isInitialized: false
+	isInitialized: false,
+	user: null
 }
 
 const authSlice = createSlice({
