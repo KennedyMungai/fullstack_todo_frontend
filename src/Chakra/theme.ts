@@ -1,5 +1,8 @@
 import { extendTheme } from '@chakra-ui/react'
 
-const theme = extendTheme({})
-
-export const theme
+export const theme = extendTheme({
+	fonts: {
+		head: 'montserrat, sans-serif',
+		body: ''
+	}
+})
