@@ -5,12 +5,15 @@ import { useForm } from 'react-hook-form'
 type Props = {}
 
 const Login = (props: Props) => {
-    const { handleSubmit register, formState: {errors, isSubmitting}} = useForm()
+    const {
+		handleSubmit,
+		register,
+		formState: { errors, isSubmitting }
+	} = useForm()
 
-    const onSubmit = async (values) =>
-    {
-        console.log(values)
-    }
+    const onSubmit = (values) => {
+		console.log(values)
+	}
 
 	return (
 		<Flex height={'100vh'} align={'center'} justify={'center'}>
@@ -22,7 +25,7 @@ const Login = (props: Props) => {
 				rounded={'0.5rem'}
 			>
 				<Heading>Login</Heading>
-				<form>
+				<form onSubmit={handleSubmit(onSubmit)}>
 					<FormControl></FormControl>
 				</form>
 			</Flex>
