@@ -20,8 +20,14 @@ const authSlice = createSlice({
 	name: 'Auth',
 	initialState,
 	reducers: {
-		login: () => {},
-		logout: () => {}
+		login: ({ isInitialized, isAuthenticated, user }) => {
+			if (isInitialized && isAuthenticated) {
+				return user
+			}
+		},
+		logout: ({ isAuthenticated }) => {
+			isAuthenticated = false
+		}
 	},
 	extraReducers: (builder) => {
 		builder
@@ -33,7 +39,7 @@ const authSlice = createSlice({
 			})
 			.addCase(
 				initialize.fulfilled,
-				(state, action: PayloadAction<AuthTemplate>) => {
+				(state, action: PayloadAction<any>) => {
 					state.isLoading = false
 					state.isAuthenticated = true
 					state.isInitialized = true
