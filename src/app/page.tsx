@@ -1,4 +1,4 @@
-import TodoBody from '@/Components/TodoBody'
+import TodoBody from '@/components/TodoBody'
 
 export default function Home() {
 	return (
