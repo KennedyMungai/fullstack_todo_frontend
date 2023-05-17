@@ -1,5 +1,6 @@
 'use client'
 import {
+	Button,
 	Flex,
 	FormControl,
 	FormErrorMessage,
@@ -69,6 +70,9 @@ const Login = (props: Props) => {
 							{errors.password && errors.password.message}
 						</FormErrorMessage>
 					</FormControl>
+					<Button w={'100%'} mt={6} type='submit'>
+						Login
+					</Button>
 				</form>
 			</Flex>
 		</Flex>
