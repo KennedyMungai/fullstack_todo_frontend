@@ -85,7 +85,7 @@ const Login = (props: Props) => {
 						mt={6}
 						type='submit'
 						variant={'outline'}
-						colorScheme='gray'
+						colorScheme='green'
 					>
 						<Link href='/auth/register'>Register Instead</Link>
 					</Button>
