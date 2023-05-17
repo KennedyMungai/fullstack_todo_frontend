@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form'
 type Props = {}
 
 const Login = (props: Props) => {
+    const { handleSubmit register, formState: {errors, isSubmitting}} = useForm()
+
 	return (
 		<Flex height={'100vh'} align={'center'} justify={'center'}>
 			<Flex
