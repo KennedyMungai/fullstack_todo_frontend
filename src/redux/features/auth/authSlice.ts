@@ -40,12 +40,12 @@ const authSlice = createSlice({
 					state.user = action.payload.user
 				}
 			)
-			.addCase(initialize.error, (state) => {
-                state.isLoading = false
-                state.isAuthenticated = false
-                state.isInitialized = true
-                state.user = null
-            })
+			.addCase(initialize.rejected, (state) => {
+				state.isLoading = false
+				state.isAuthenticated = false
+				state.isInitialized = true
+				state.user = null
+			})
 	}
 })
 
