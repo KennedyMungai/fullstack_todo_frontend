@@ -1,11 +1,9 @@
-import { Flex, Text } from '@chakra-ui/react'
+import TodoBody from '@/Components/TodoBody'
 
 export default function Home() {
 	return (
-		<Flex>
-			<Text>
-        ChickenWings Are the Bomb
-      </Text>
-		</Flex>
+		<>
+			<TodoBody />
+		</>
 	)
 }
