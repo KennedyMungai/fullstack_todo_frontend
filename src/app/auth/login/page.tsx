@@ -1,9 +1,10 @@
+import Login from '@/components/auth/Login'
 import React from 'react'
 
 type Props = {}
 
-const Login = (props: Props) => {
-	return <div>Login</div>
+const LoginPage = (props: Props) => {
+	return <Login />
 }
 
-export default Login
+export default LoginPage
