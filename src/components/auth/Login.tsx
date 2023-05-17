@@ -11,14 +11,12 @@ import {
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 
-type Props = {}
-
 interface Credentials {
 	email: string
 	password: string
 }
 
-const Login = (props: Props) => {
+const Login = () => {
 	const {
 		handleSubmit,
 		register,
