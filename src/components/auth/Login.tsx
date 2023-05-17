@@ -13,6 +13,11 @@ import { useForm } from 'react-hook-form'
 
 type Props = {}
 
+interface Credentials {
+	email: string
+	password: string
+}
+
 const Login = (props: Props) => {
 	const {
 		handleSubmit,
