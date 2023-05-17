@@ -57,7 +57,7 @@ const Login = () => {
 							{errors.email && errors.email.message}
 						</FormErrorMessage>
 					</FormControl>
-					<FormControl isInvalid={errors.email}>
+					<FormControl isInvalid={errors.password}>
 						<Input
 							placeholder='Password'
 							background={useColorModeValue(

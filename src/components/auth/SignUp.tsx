@@ -14,6 +14,7 @@ import ThemeToggler from '../theme/themeToggler'
 
 interface Credentials {
 	email: string
+	username: string
 	password: string
 }
 
@@ -39,6 +40,24 @@ const SignUp = () => {
 			>
 				<Heading>Sign Up</Heading>
 				<form onSubmit={handleSubmit(onSubmit)}>
+					<FormControl isInvalid={errors.username}>
+						<Input
+							placeholder='Username'
+							background={useColorModeValue(
+								'gray.300',
+								'gray.600'
+							)}
+							type='text'
+							size={'lg'}
+							mt={6}
+							{...register('username', {
+								required: 'Username is a required field'
+							})}
+						/>
+						<FormErrorMessage>
+							{errors.username && errors.username.message}
+						</FormErrorMessage>
+					</FormControl>
 					<FormControl isInvalid={errors.email}>
 						<Input
 							placeholder='Email'
@@ -57,7 +76,7 @@ const SignUp = () => {
 							{errors.email && errors.email.message}
 						</FormErrorMessage>
 					</FormControl>
-					<FormControl isInvalid={errors.email}>
+					<FormControl isInvalid={errors.password}>
 						<Input
 							placeholder='Password'
 							background={useColorModeValue(
