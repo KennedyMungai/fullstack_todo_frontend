@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
+import ThemeToggler from '../theme/themeToggler'
 
 interface Credentials {
 	email: string
@@ -85,6 +86,7 @@ const Login = () => {
 					>
 						<Link href='/auth/login'>Login</Link>
 					</Button>
+					<ThemeToggler showLabel={true} />
 					<Button
 						w={'100%'}
 						mt={6}
