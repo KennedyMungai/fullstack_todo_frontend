@@ -15,7 +15,10 @@ const initialState: AuthTemplate = {
 const authSlice = createSlice({
 	name: 'Auth',
 	initialState,
-	reducers: {}
+	reducers: {
+		login: () => {},
+		logout: () => {}
+	}
 })
 
 
