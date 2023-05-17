@@ -25,7 +25,7 @@ const Login = (props: Props) => {
 		formState: { errors, isSubmitting }
 	} = useForm()
 
-	const onSubmit = (values) => {
+	const onSubmit = (values: Credentials) => {
 		console.log(values)
 	}
 
