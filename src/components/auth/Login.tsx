@@ -8,6 +8,7 @@ import {
 	Input,
 	useColorModeValue
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 
 type Props = {}
@@ -77,7 +78,16 @@ const Login = (props: Props) => {
 						variant={'outline'}
 						colorScheme='gray'
 					>
-						Login
+						<Link href='/auth/login'>Login</Link>
+					</Button>
+					<Button
+						w={'100%'}
+						mt={6}
+						type='submit'
+						variant={'outline'}
+						colorScheme='gray'
+					>
+						<Link href='/auth/register'>Register Instead</Link>
 					</Button>
 				</form>
 			</Flex>
