@@ -97,7 +97,17 @@ const SignUp = () => {
 							size={'lg'}
 							mt={6}
 							{...register('password', {
-								required: 'Password is a required field'
+								required: 'Password is a required field',
+								minLength: {
+									value: 5,
+									message:
+										'The password cannot be shorter than 5 characters'
+								},
+								maxLength: {
+									value: 24,
+									message:
+										'The password cannot be longer than 24 characters'
+								}
 							})}
 						/>
 						<FormErrorMessage>
