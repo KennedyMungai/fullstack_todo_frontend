@@ -7,6 +7,11 @@ type Props = {}
 const Login = (props: Props) => {
     const { handleSubmit register, formState: {errors, isSubmitting}} = useForm()
 
+    const onSubmit = async (values) =>
+    {
+        console.log(values)
+    }
+
 	return (
 		<Flex height={'100vh'} align={'center'} justify={'center'}>
 			<Flex
