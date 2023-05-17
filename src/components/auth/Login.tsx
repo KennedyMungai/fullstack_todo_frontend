@@ -84,7 +84,7 @@ const Login = () => {
 						isLoading={isSubmitting}
 						loadingText='Submitting...'
 					>
-						<Link href='/auth/login'>Login</Link>
+						Login
 					</Button>
 					<ThemeToggler showLabel={true} />
 					<Button

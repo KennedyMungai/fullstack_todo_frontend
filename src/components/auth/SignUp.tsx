@@ -123,7 +123,7 @@ const SignUp = () => {
 						isLoading={isSubmitting}
 						loadingText='Submitting...'
 					>
-						<Link href='/auth/login'>Register</Link>
+						Register
 					</Button>
 					<ThemeToggler showLabel={true} />
 					<Button
