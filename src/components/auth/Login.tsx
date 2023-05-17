@@ -1,5 +1,5 @@
 'use client'
-import { Flex, useColorModeValue } from '@chakra-ui/react'
+import { Flex, FormControl, Heading, useColorModeValue } from '@chakra-ui/react'
 
 type Props = {}
 
@@ -13,7 +13,10 @@ const Login = (props: Props) => {
 				p={'2rem'}
 				rounded={'0.5rem'}
 			>
-				Main Box
+				<Heading>Login</Heading>
+				<form>
+					<FormControl></FormControl>
+				</form>
 			</Flex>
 		</Flex>
 	)
