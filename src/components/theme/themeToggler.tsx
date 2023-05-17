@@ -2,8 +2,8 @@ import React from 'react'
 
 type Props = {}
 
-const themeToggler = (props: Props) => {
+const ThemeToggler = (props: Props) => {
 	return <div>themeToggler</div>
 }
 
-export default themeToggler
+export default ThemeToggler
